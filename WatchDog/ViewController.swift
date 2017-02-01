@@ -13,6 +13,7 @@
 import OAuthSwift
 import CloudKit
 
+
 class ViewController: OAuthViewController {
   
     //
@@ -35,10 +36,31 @@ class ViewController: OAuthViewController {
 
     }
 
+    
+    @IBAction func getdogbutton(_ sender: Any) {
+        FetchDogs()
+    }
+    
+    @IBAction func getuserimagebtn(_ sender: Any) {
+        print ("get the image")
+    }
+   
+    @IBAction func getdogimagebtn(_ sender: Any) {
+        print ("get the dog image")
+        getdogimage()
+    }
+    
+    
+    
     @IBAction func saveuserbutton(_ sender: Any) {
         SaveOwnerRecord() 
     }
    
+    @IBOutlet weak var dogcountlabel: UILabel!
+    
+    @IBOutlet weak var dogimageview: UIImageView!
+    @IBOutlet weak var userimageview: UIImageView!
+    
     let oauthswift = OAuth2Swift(
         consumerKey:    "fdcb4ac3295906a977f6317979ffaab6d11d93e833c1f41ed834c2b0908cdf2c",
         consumerSecret: "4ca58af6e0b5c9188d17fc92366c86b8f1f4c8bd9e77ef847edc6479487ef120",
@@ -46,7 +68,8 @@ class ViewController: OAuthViewController {
         accessTokenUrl: "https://app.fitbark.com/oauth/token",
         responseType:   "code"
     )
-  //  var oauthswift: OAuthSwift?
+
+    var dogimageviewpointer = 0
     var currentParameters = [String: String]()
     let formData = Semaphore<FormViewControllerData>()
     lazy var internalWebViewController: WebViewController = {
@@ -68,7 +91,9 @@ class ViewController: OAuthViewController {
     var tokendate:Date! //date when token was originally created
     //var userslug = "" as String! // my users slug from fitbark
     var userslug:String = "" // my users slug from fitbark
-
+    var slugs = [String]() // an array that matches the dog's slug so we can get other info about our dogs
+    var dogs = [Dog]()  // an array of dog records - names/slugs/ages/etc that we get back from related dogs
+    var dogsluglist = [String]() //an array of dog slugs that the user owns --> we are going to save to icloud
     
 }
 
@@ -119,63 +144,115 @@ extension ViewController {
        
       
     }
+
+func getdogimage() {
+        // first I need to figure out what dog to get
+        // assume we already registered and have a dog slug 
+   
+    //every time the load picture button is pressed, we display the next dog in our list of dogs
+    
+    self.dogimageviewpointer =  self.dogimageviewpointer + 1
+    if self.dogimageviewpointer  >= self.dogsluglist.count {
+        self.dogimageviewpointer = 0
+    }
+    self.dogcountlabel.text = "\((self.dogimageviewpointer  + 1)) of \(self.dogsluglist.count)"
+    let predicate = NSPredicate(format: "(slug BEGINSWITH %@) ", self.dogsluglist[self.dogimageviewpointer])
+    let query = CKQuery(recordType: "Dogs", predicate: predicate)
+    //print ("Query: \(query)")
+    publicDB.perform(query, inZoneWith: nil, completionHandler: { (records, error) in
+        if error != nil {
+            print("Error querying records: \(error!.localizedDescription)")
+        } else {
+            if records!.count == 1 {
+                // we have retrieved a dog record
+                for dog in records! {
+                    print("Dog Owner's slug: \(dog["slug"])")
+                    let downloadedimage = dog["image"] as! CKAsset
+                    self.dogimageview.image = UIImage(contentsOfFile: downloadedimage.fileURL.path)
+                }
+            }
+        }
+    })
+    }
+    
     
 func getuserslug() {
+    //use the auth token from icloud
+    //login to fitbark API
+    //parse out the user's slug from fitbark
     
-    /*
- 
- let _ = oauthswift.client.get("https://app.fitbark.com/api/v2/user", parameters: [:], success: { response in
- let jsonDict = try? response.jsonObject()
- print(jsonDict as Any)
- },
- failure: { error in
- print(error.description)
- }
- )
- }
-     
-     oauthswift.client.get("http://api.linkedin.com/v1/people/~?", parameters: parameters, success: { (data, response) -> Void in
-     println("Succes") // or print some data from the profile
-     }, failure: { (error) -> Void in
-     println("Failed") // or reason what failed
-     })
- */
     print ("getuserslug")
+    oauthswift.client.credential.oauthToken = self.authtoken!
     let _ = oauthswift.client.get("https://app.fitbark.com/api/v2/user", parameters: [:], success: { response in
-        let jsonDict = try? response.jsonObject() as AnyObject!
-      //  print(jsonDict as AnyObject!)
-        let curr_user = jsonDict?["user"] as! NSDictionary?
-        let slug = curr_user!["slug"] as? String
-        self.firstname = curr_user!["first_name"] as? String
-        self.lastname = curr_user!["last_name"] as? String
-        self.userslug = slug!
-        print ("Slug: \(self.userslug)")
-      //  print("jsonDict: \(jsonDict)")
-        
+      let jsonDict = try? response.jsonObject() as AnyObject!
+      let curr_user = jsonDict?["user"] as! NSDictionary?
+      let slug = curr_user!["slug"] as? String
+      self.firstname = curr_user!["first_name"] as? String
+      self.lastname = curr_user!["last_name"] as? String
+      self.userslug = slug!
+      print ("Slug: \(self.userslug)")
     },
-                                  failure: { error in
-                                    print(error.description)
+                failure: { error in
+                print(error.description)
     }
     )
-
-
-                         //   let jsonDict: AnyObject! = try? NSJSONSerialization.JSONObjectWithData(data, options: [])
     
+}
+
+    
+    
+    
+    
+    func SaveDogRecord (_ dog2save:Dog) { //maybe in the future deal with passing a dog into here
+        //func SaveDogRecord(_ dog2save: Dog) {
+            /*SAVE*/
+        
+        //before i saave...make sure I don't already have that dog.... 
+        
+       
+        let predicate = NSPredicate(format: "(slug BEGINSWITH %@) ", dog2save.slug)
+        let query = CKQuery(recordType: "Dogs", predicate: predicate)
+        //print ("Query: \(query)")
+        publicDB.perform(query, inZoneWith: nil, completionHandler: { (records, error) in
+            if error != nil {
+                print("Error querying records: \(error!.localizedDescription)")
+            } else {
+                if records!.count == 0 {
+                    // we don't have any records that match the dog slug - so save it
+                    let dogRecord = CKRecord(recordType: "Dogs")
+                    dogRecord["name"] = dog2save.name as CKRecordValue?
+                    dogRecord["gender"] =  dog2save.gender as CKRecordValue?
+                    dogRecord["last_sync"] = Date() as CKRecordValue?
+                    dogRecord["owner_slug"] = dog2save.owner as CKRecordValue?
+                    dogRecord["slug"] = dog2save.slug as CKRecordValue?
+                    //dogRecord["image"] = dog2save.image as CKRecordValue?
+                    //   dogRecord["birth"] = dog2save.birth
+                    
+                    self.publicDB.save(dogRecord, completionHandler: ({returnRecord, error in
+                        if let err = error {
+                            print("Error saving record for owner \(err)")
                             
-    
-    
-        print ("gotuserslug")
+                        }
+                        else {
+                            //self.view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
+                            print("Dog  saved \(dogRecord["name"])")
+                        }
+                        
+                    }))
+                }
+            }
+        })
         
     }
+    
 
     
-    func SaveOwnerRecord() {
+func SaveOwnerRecord() {
         /*SAVE*/
         //     self.keychain["the_token_key"] = self.oauthswift.client.credential.oauth_token
-  //      authtoken = self.oauthswift.client.credential.oauth_token
+        //      authtoken = self.oauthswift.client.credential.oauth_token
         OwnerRecord["first_name"] = self.firstname as CKRecordValue?
         OwnerRecord["last_name"] = self.lastname as CKRecordValue?
-        //OwnerRecord["token"] = self.oauthswift.client.credential.oauth_token
         OwnerRecord["token"] = self.authtoken as CKRecordValue?
         OwnerRecord["token_date"] = Date() as CKRecordValue?
         OwnerRecord["slug"] = self.userslug as CKRecordValue?
@@ -183,7 +260,7 @@ func getuserslug() {
             DispatchQueue.main.async {
                 if error == nil {
                     self.view.backgroundColor = UIColor(red: 0, green: 0.6, blue: 0, alpha: 1)
-                    print("TOken: \(self.authtoken)")
+                    print("Token: \(self.authtoken)")
                     print(" Record saved")
                 } else {
                     print("Error saving record for owner \(error)")
@@ -195,7 +272,6 @@ func getuserslug() {
 func doOAuthFitBark() {
     print ("Do auth fitbark - woof!")
     oauthswift.accessTokenBasicAuthentification = true
-   // self.oauthswift = oauthswift
     oauthswift.authorizeURLHandler = internalWebViewController
     print( "Get params: \(oauthswift.parameters)")
      let state = generateState(withLength: 20)
@@ -222,9 +298,7 @@ func doOAuthFitBark() {
     
  print ("Done getting access code")
     
-    //now get the access code and go  get a token
-  //  self.testFitBark(oauthswift)
-    
+ 
      }
     
     
@@ -278,6 +352,95 @@ func getusername() {
     
 } //end of getusername
 
+
+func FetchDogs() {
+    // log into Fitbark and get a list of all the dogs that are related to the user
+    print ("Fetching Dogs from Fitbark")
+    var ownerdogcount = 0
+    var doglist = [String]()
+    oauthswift.client.credential.oauthToken = self.authtoken!
+    let _ = oauthswift.client.get("https://app.fitbark.com/api/v2/dog_relations", parameters: [:], success: { response in
+    let data = response.string
+    if let dataFromString = data?.data(using: .utf8, allowLossyConversion: false) {
+        let json = JSON(data: dataFromString)
+                for item in json["dog_relations"].arrayValue {
+                   //         print("Name: \(item["dog"]["name"].stringValue)")
+                    if ( item["status"].stringValue == "OWNER" ) {   //we only want my dogs, not friends
+                        let dogname = item["dog"]["name"].stringValue
+                        let dogslug = item["dog"]["slug"].stringValue
+                        let dogweight = item["dog"]["weight"].int
+                        let doggender = item["dog"]["gender"].stringValue
+                        let dogbirth = item["dog"]["birth"].stringValue
+                       //We only got user related dogs here...so we'd need to get the dog's full on details 
+                        // to do that we need to query this...  https://app.fitbark.com/api/v2/picture/dog/{dog_slug} 
+                        //let dogimage = item["dog"]["image"].stringValue
+           
+                        //tried to set an image and that didn't work nicely...
+                      // let downloadedimage = item["dog"]["image"] as! CKAsset
+               //       self.userimageview.image = UIImage( contentsOfFile: downloadedimage.fileURL.path)
+                        
+    
+                        let dateFormatter = DateFormatter()
+                        dateFormatter.dateFormat = "yyyy-MM-dd"
+                        //dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
+                        let dogbday = dateFormatter.date( from: dogbirth )
+                       // print("Dog image: \(dogimage)")
+                        //print("Dog weight: \(dogweight)")
+                        let mydog = Dog(birth:dogbday!, gender:doggender, weight:dogweight!, name: dogname, slug:dogslug, image:"", owner:"")
+                        // self.dogs[self.ownderdogcount].name = dogname
+                        // self.dogs[self.ownderdogcount].slug = dogslug
+                        self.dogs.append(mydog)
+                        self.dogsluglist.append(mydog.slug)
+                        self.SaveDogRecord(mydog)
+                        ownerdogcount = ownerdogcount + 1
+                        var numberofdogrelations = json["dog_relations"].count
+                       // self.dogtableview.reloadData()
+                      //  print ("Count of related dogs: \(numberofdogrelations)")
+                      //  if let weight = json["dog_relations"][2]["dog"]["weight"].int {
+                      //      print("dog #3 weight: \(weight)")
+                     //   }
+                     //   if let name = json["dog_relations"][0]["dog"]["name"].string {
+                    //        print("dog #2 name: \(name)")
+                       // } //1 dog name
+                    } //item status
+        } //for loop
+       
+        //maybe when saving the dogs i'll also update the user record and fill up the dog_relations array with the list of dog slugs
+       // print ("Here is my dog slug list: \(self.dogsluglist)")
+       // print ("User slug: \(self.userslug)")
+        self.dogsluglist = Array(Set(self.dogsluglist))  //remove duplicates by converting to a set and then back to an Array
+      //  print ("Here is my updated dog slug list: \(self.dogsluglist)")
+        
+        let predicate = NSPredicate(format: "slug BEGINSWITH %@", self.userslug)
+        let query = CKQuery(recordType: "Owners", predicate: predicate)
+        self.publicDB.perform(query, inZoneWith: nil, completionHandler: { (records, error) in
+            if error != nil {
+                print("Error querying records: \(error!.localizedDescription)")
+            } else {
+                if records!.count > 0 {
+                    let record = records!.first! as CKRecord
+                    // Now you have grabbed your existing record from iCloud
+                    // Apply whatever changes you want
+                    record.setObject(self.dogsluglist as CKRecordValue?, forKey: "dog_relations")
+                    // Save this record again
+                    self.publicDB.save(record, completionHandler: { (savedRecord, saveError)in
+                        if saveError != nil {
+                            print("Error saving record: \(saveError!.localizedDescription)")
+                        } else {
+                            print("Successfully updated user record!")
+                        }
+                    })
+                }
+            }})
+//////////done copy
+            
+            
+        
+        } //if let
+        }, failure: { error in
+            print(error.localizedDescription)
+        })
+       }  // end of getting the dogs
     
 func checkUserExists() {
     //CLOUD retreival
@@ -303,15 +466,17 @@ func checkUserExists() {
                         print("Dog Owner  token date: \(owner["token_date"])")
                         print("Dog Owner's slug: \(owner["slug"])")
                         self.userslug = String(describing: owner["slug"]!)
-                     //   SwiftSpinner.hide()  //we have authenticated
-                    }
+                       // }
                     
-                    //  let downloadedimage = user["image"] as! CKAsset
-                    //  self.userImageView.image = UIImage(
-                    //      contentsOfFile: downloadedimage.fileURL.path!
-                    //  )
-    
+                     let downloadedimage = owner["image"] as! CKAsset
+                     self.userimageview.image = UIImage(
+                    contentsOfFile: downloadedimage.fileURL.path
+                      )
+            }
+                    SwiftSpinner.hide()  //we have authenticated
+
                     self.authtoken = String(describing: owner["token"]!)
+                    print ("Token: \(self.authtoken)")
                     let mydate = owner["token_date"] as! Date
                     self.tokendate = mydate
                     if self.debug {
@@ -352,6 +517,8 @@ extension ViewController {
         // init now web view handler
         let _ = internalWebViewController.webView
         self.navigationItem.title = "Login"
+        SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
+        SwiftSpinner.show("Logging in...", animated: false)
         getusername()  // icloud login
     }
     

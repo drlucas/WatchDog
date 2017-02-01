@@ -30,6 +30,9 @@
 		945542EB1E1ED1A10063CC10 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EA1E1ED1A10063CC10 /* WebViewController.swift */; };
 		945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EC1E1ED2320063CC10 /* FormViewController.swift */; };
 		945542EF1E1ED5D40063CC10 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EE1E1ED5D40063CC10 /* Storyboards.swift */; };
+		9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */; };
+		9463F37F1E40C4A3007CA0F6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */; };
+		9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */; };
 		94ADF9271E3C1750004DA391 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ADF9261E3C1750004DA391 /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
@@ -169,6 +172,9 @@
 		945542EA1E1ED1A10063CC10 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		945542EC1E1ED2320063CC10 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
 		945542EE1E1ED5D40063CC10 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
+		9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogUserStructure.swift; sourceTree = "<group>"; };
 		94ADF9261E3C1750004DA391 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -238,6 +244,9 @@
 		943FD43D1E189CB9006BF3BA /* WatchDog */ = {
 			isa = PBXGroup;
 			children = (
+				9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */,
+				9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */,
+				9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */,
 				943FD43E1E189CB9006BF3BA /* AppDelegate.swift */,
 				945542EE1E1ED5D40063CC10 /* Storyboards.swift */,
 				945542EA1E1ED1A10063CC10 /* WebViewController.swift */,
@@ -591,8 +600,11 @@
 				943FD4411E189CB9006BF3BA /* ViewController.swift in Sources */,
 				945542EF1E1ED5D40063CC10 /* Storyboards.swift in Sources */,
 				945542EB1E1ED1A10063CC10 /* WebViewController.swift in Sources */,
+				9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */,
 				945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */,
 				943FD43F1E189CB9006BF3BA /* AppDelegate.swift in Sources */,
+				9463F37F1E40C4A3007CA0F6 /* SwiftyJSON.swift in Sources */,
+				9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
