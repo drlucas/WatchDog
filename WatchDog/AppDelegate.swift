@@ -8,18 +8,19 @@
 
 import UIKit
 import OAuthSwift
+import WatchConnectivity
+
 
 @UIApplicationMain
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
+class AppDelegate: UIResponder, UIApplicationDelegate {//, WCSessionDelegate  {
     
-        var window: UIWindow?
-
-
+           var window: UIWindow?
+    
     
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
            // print("starting up")
-
+          
             return true
         }
         

@@ -12,14 +12,12 @@
 
 import OAuthSwift
 import CloudKit
+import WatchConnectivity
 
+class ViewController: OAuthViewController , WCSessionDelegate {
 
-class ViewController: OAuthViewController {
-  
-    //
-    //
-    
-    //test
+    var string = "Hello World"
+    let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
     
     @IBAction func LoginButton(_ sender: UIButton) {
         print ("Login pushed")
@@ -35,7 +33,8 @@ class ViewController: OAuthViewController {
         getuserslug()
 
     }
-
+    
+    
     
     @IBAction func getdogbutton(_ sender: Any) {
         FetchDogs()
@@ -50,7 +49,37 @@ class ViewController: OAuthViewController {
         getdogimage()
     }
     
+    @IBAction func pingwatch(_ sender: Any) {
+        print ("send watch a text")
+        
+    }
     
+    
+    
+    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+        let msg = message["StringValueSentFromiWatch"] as! String
+        print ("Message received: \(msg)")
+        DispatchQueue.main.async {
+            self.watchmessage.text = msg
+
+        }
+        
+    
+    }
+    
+    func session(_ session: WCSession,
+                 activationDidCompleteWith activationState: WCSessionActivationState,
+                 error: Error?) {
+        
+    }
+    
+    func sessionDidBecomeInactive(_ session: WCSession) {
+        
+    }
+    
+    func sessionDidDeactivate(_ session: WCSession) {
+        
+    }
     
     @IBAction func saveuserbutton(_ sender: Any) {
         SaveOwnerRecord() 
@@ -60,6 +89,10 @@ class ViewController: OAuthViewController {
     
     @IBOutlet weak var dogimageview: UIImageView!
     @IBOutlet weak var userimageview: UIImageView!
+    @IBOutlet weak var watchmessage: UILabel!
+
+    
+    
     
     let oauthswift = OAuth2Swift(
         consumerKey:    "fdcb4ac3295906a977f6317979ffaab6d11d93e833c1f41ed834c2b0908cdf2c",
@@ -168,7 +201,10 @@ func getdogimage() {
                 for dog in records! {
                     print("Dog Owner's slug: \(dog["slug"])")
                     let downloadedimage = dog["image"] as! CKAsset
-                    self.dogimageview.image = UIImage(contentsOfFile: downloadedimage.fileURL.path)
+                    DispatchQueue.main.async {
+                        self.dogimageview.image = UIImage(contentsOfFile: downloadedimage.fileURL.path)
+                        
+                    }
                 }
             }
         }
@@ -469,10 +505,13 @@ func checkUserExists() {
                        // }
                     
                      let downloadedimage = owner["image"] as! CKAsset
-                     self.userimageview.image = UIImage(
-                    contentsOfFile: downloadedimage.fileURL.path
-                      )
-            }
+                        DispatchQueue.main.async {
+                            self.userimageview.image = UIImage(
+                                contentsOfFile: downloadedimage.fileURL.path
+                            )
+
+                        }
+                                 }
                     SwiftSpinner.hide()  //we have authenticated
 
                     self.authtoken = String(describing: owner["token"]!)
@@ -517,10 +556,20 @@ extension ViewController {
         // init now web view handler
         let _ = internalWebViewController.webView
         self.navigationItem.title = "Login"
-        SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
+
+        //watchkit testing
+        session?.delegate = self
+        session?.activate()
+
+        
+               SwiftSpinner.setTitleFont(UIFont(name: "Futura", size: 22.0))
         SwiftSpinner.show("Logging in...", animated: false)
         getusername()  // icloud login
+        
+                
     }
+ 
+    
     
     // MARK: utility methods
     
