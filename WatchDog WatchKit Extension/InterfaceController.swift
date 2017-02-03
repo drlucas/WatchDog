@@ -33,6 +33,8 @@ class InterfaceController: WKInterfaceController,  WCSessionDelegate {
     }
     
     @IBOutlet var dogimageview: WKInterfaceImage!
+    
+    
     @IBOutlet var dogbarkpoints: WKInterfaceLabel!
     
     override func awake(withContext context: Any?) {
