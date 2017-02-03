@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -14,13 +14,13 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchDog_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView alignment="left" id="7Po-Np-th6"/>
-                        <button width="1" alignment="left" title="Button" id="9bt-CF-Bmd">
+                        <imageView height="84" alignment="left" id="7Po-Np-th6"/>
+                        <button width="1" alignment="left" title="Fetch Points" id="9bt-CF-Bmd">
                             <connections>
                                 <action selector="fetchpoints" destination="AgC-eL-Hgc" id="CCx-la-4gM"/>
                             </connections>
                         </button>
-                        <label alignment="left" text="Label" id="Kaf-uQ-6jm"/>
+                        <label width="156" height="25" alignment="left" text="FitBark Points" textAlignment="center" id="Kaf-uQ-6jm"/>
                     </items>
                     <connections>
                         <outlet property="dogbarkpoints" destination="Kaf-uQ-6jm" id="Wxg-kT-Tae"/>
@@ -28,7 +28,7 @@
                     </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="220" y="345"/>
+            <point key="canvasLocation" x="-153.43589743589746" y="51"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

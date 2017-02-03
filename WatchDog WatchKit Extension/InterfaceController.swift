@@ -32,6 +32,19 @@ class InterfaceController: WKInterfaceController,  WCSessionDelegate {
                  error: Error?){
     }
     
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: ([String : Any]) -> Void) {
+        print("Message - received")
+        let msg = message["StringValueSentFromiWatch"] as! String
+        //Send reply
+        let data = ["receivedData" : true]
+        replyHandler(data as [String : AnyObject])
+        DispatchQueue.main.async {
+            self.dogbarkpoints.setText(msg)
+            
+        }
+        
+    }
+   
     @IBOutlet var dogimageview: WKInterfaceImage!
     
     

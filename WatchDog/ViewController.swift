@@ -51,7 +51,13 @@ class ViewController: OAuthViewController , WCSessionDelegate {
     
     @IBAction func pingwatch(_ sender: Any) {
         print ("send watch a text")
-        
+        let msg = ["StringValueSentFromiWatch" : "GOT IT"]
+        session?.sendMessage(msg, replyHandler: { (replay) -> Void in
+            print("apple watch sent")
+        }) { (error) -> Void in
+            print("apple watch sent error \(error)")
+        }
+
     }
     
     
