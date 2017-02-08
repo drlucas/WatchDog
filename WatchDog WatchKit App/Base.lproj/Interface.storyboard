@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12027"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -25,10 +25,18 @@
                     <connections>
                         <outlet property="dogbarkpoints" destination="Kaf-uQ-6jm" id="Wxg-kT-Tae"/>
                         <outlet property="dogimageview" destination="7Po-Np-th6" id="G1x-TZ-6Ks"/>
+                        <segue destination="hZc-jX-jZZ" kind="relationship" relationship="nextPage" id="QWn-pm-Uw8"/>
                     </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="-153.43589743589746" y="51"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="f0P-3C-6Ff">
+            <objects>
+                <controller id="hZc-jX-jZZ"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="51"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

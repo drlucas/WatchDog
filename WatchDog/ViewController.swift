@@ -18,6 +18,7 @@ class ViewController: OAuthViewController , WCSessionDelegate {
 
     var string = "Hello World"
     let session: WCSession? = WCSession.isSupported() ? WCSession.default() : nil
+    let zerovalue = 0
     
     @IBAction func LoginButton(_ sender: UIButton) {
         print ("Login pushed")
@@ -49,8 +50,76 @@ class ViewController: OAuthViewController , WCSessionDelegate {
         getdogimage()
     }
     
+    /*
+ 
+     // Sender
+     func transferUserInfo(userInfo: [String : AnyObject]) -> WCSessionUserInfoTransfer? {
+     r
+     eturn validSession?.transferUserInfo(userInfo)
+     }
+     
+     func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+     // implement this on the sender if you need to confirm that
+     // the user info did in fact transfer
+     }
+     
+     // Receiver
+     func session(_ session: WCSession, didReceiveUserInfo userInfo: [String : Any] = [:]) {
+     // handle receiving user info
+     DispatchQueue.main.async {
+     // make sure to put on the main queue to update UI!
+     }
+ */
+    
+    
+    func session(session: WCSession, didFinishFileTransfer fileTransfer: WCSessionFileTransfer, error: NSError?) {
+        // func session(_ session: WCSession, didFinish fileTransfer: WCSessionFileTransfer, error: Error?) {
+        // handle filed transfer completion
+            //}
+    
+        if error != nil {
+            print(error?.description)
+        }
+        else{
+            print("Finished File Transfer Successfully")
+        }
+    }
+    
+    func session(_ session: WCSession, didFinish userInfoTransfer: WCSessionUserInfoTransfer, error: Error?) {
+        if let error = error {
+            print("\(error.localizedDescription)")
+        } else {
+            print("completed transfer of \(userInfoTransfer)")
+        }
+    }
+    
+    // MARK: Transfer File
+
+    
+
+
     @IBAction func pingwatch(_ sender: Any) {
-        print ("send watch a text")
+        print ("send watch a text and picture")
+        // now lets try to send the watch a picture
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let filePath = "\(paths[0])/userimage.jpg"
+        let imageURL = NSURL(fileURLWithPath: filePath)
+        print ("Local file: \(imageURL)")  // NSURL *imageURL = [self imageFileURL];
+        let data = UIImageJPEGRepresentation(userimageview.image!, 1)  //NSData *resizedImageData = [self resizedImageForImage:image];
+        var success = true
+        
+        do {
+            try data?.write(to: imageURL as URL)
+                DispatchQueue.main.async {
+                    print("apple watch sending graphic file: \(imageURL)")
+                    self.session?.transferFile(imageURL as URL, metadata: nil)
+                    
+            }
+                    } catch {
+            print(error)
+        }
+        
+    
         let msg = ["StringValueSentFromiWatch" : "GOT IT"]
         session?.sendMessage(msg, replyHandler: { (replay) -> Void in
             print("apple watch sent")
@@ -60,9 +129,17 @@ class ViewController: OAuthViewController , WCSessionDelegate {
 
     }
     
+ 
     
     
-    func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+    func getDocumentsDirectory() -> NSString {
+        let paths = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)
+        let documentsDirectory = paths[0]
+        return documentsDirectory as NSString
+    }
+   
+   // func session(_ session: WCSession, didReceiveMessage message: [String : AnyObject], replyHandler: ([String : AnyObject]) -> Void) {
+    func session(_ session: WCSession, didReceiveMessage message: [String : Any], replyHandler: @escaping ([String : Any]) -> Void) {
         let msg = message["StringValueSentFromiWatch"] as! String
         print ("Message received: \(msg)")
         DispatchQueue.main.async {
@@ -363,6 +440,7 @@ func getusername() {
         // Call function checkUserExists to see if record exists in WatchDog icloud database so we can use that access token vs logging in manually
     
         let container = CKContainer.default()
+        print ("Container: \(container)")
         container.requestApplicationPermission(.userDiscoverability) { (status, error) in
             guard error == nil else {
                 print ("Error: \(error)")
@@ -494,7 +572,7 @@ func checkUserExists() {
     }
     publicDB.perform(query, inZoneWith: nil) { (records, error) in
         if self.debug {
-            print("Record count: \(records?.count)")
+            print("Record count: \(records?.count ?? self.zerovalue)")
             }
         if records?.count == 0 {      //no user account exists, create it then
                // self.loginUser()  // go to fitbark and get token then save it

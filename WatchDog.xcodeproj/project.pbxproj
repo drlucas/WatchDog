@@ -33,7 +33,9 @@
 		9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */; };
 		9463F37F1E40C4A3007CA0F6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */; };
 		9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */; };
-		94ADF9271E3C1750004DA391 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ADF9261E3C1750004DA391 /* CloudKit.framework */; };
+		94B58ACB1E493FB90004324F /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B58ACA1E493FB90004324F /* dog.png */; };
+		94C467AB1E454B050027B63F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C467AA1E454B050027B63F /* CloudKit.framework */; };
+		94C467B01E47E7110027B63F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C467AF1E47E7110027B63F /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -177,7 +179,10 @@
 		9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogUserStructure.swift; sourceTree = "<group>"; };
 		9463F38B1E42AAAC007CA0F6 /* WatchDog WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDog WatchKit App.entitlements"; sourceTree = "<group>"; };
 		9463F38C1E42AE9C007CA0F6 /* WatchDog WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchDog WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
-		94ADF9261E3C1750004DA391 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		94B58ACA1E493FB90004324F /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		94C467AA1E454B050027B63F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		94C467AE1E47E70D0027B63F /* WatchDog WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDog WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		94C467AF1E47E7110027B63F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -185,7 +190,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94ADF9271E3C1750004DA391 /* CloudKit.framework in Frameworks */,
+				94C467AB1E454B050027B63F /* CloudKit.framework in Frameworks */,
 				943FD4B21E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
 				943FD4B31E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
 				943FD4B41E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
@@ -211,6 +216,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C467B01E47E7110027B63F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +261,7 @@
 				945542EC1E1ED2320063CC10 /* FormViewController.swift */,
 				943FD4401E189CB9006BF3BA /* ViewController.swift */,
 				943FD4421E189CB9006BF3BA /* Main.storyboard */,
+				94B58ACA1E493FB90004324F /* dog.png */,
 				943FD4451E189CB9006BF3BA /* Assets.xcassets */,
 				943FD4471E189CB9006BF3BA /* LaunchScreen.storyboard */,
 				9433DD8B1E36357700FAD38E /* WatchDog.entitlements */,
@@ -296,6 +303,7 @@
 		943FD4761E189CB9006BF3BA /* WatchDog WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				94C467AE1E47E70D0027B63F /* WatchDog WatchKit Extension.entitlements */,
 				943FD4791E189CB9006BF3BA /* InterfaceController.swift */,
 				943FD47B1E189CB9006BF3BA /* ExtensionDelegate.swift */,
 				943FD47D1E189CB9006BF3BA /* NotificationController.swift */,
@@ -332,7 +340,8 @@
 		94ADF9251E3C1750004DA391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94ADF9261E3C1750004DA391 /* CloudKit.framework */,
+				94C467AF1E47E7110027B63F /* CloudKit.framework */,
+				94C467AA1E454B050027B63F /* CloudKit.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -444,6 +453,9 @@
 						DevelopmentTeam = Q2M9CTRHEY;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -475,7 +487,16 @@
 					};
 					943FD4711E189CB9006BF3BA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q2M9CTRHEY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -564,6 +585,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94B58ACB1E493FB90004324F /* dog.png in Resources */,
 				943FD4491E189CB9006BF3BA /* LaunchScreen.storyboard in Resources */,
 				943FD4461E189CB9006BF3BA /* Assets.xcassets in Resources */,
 				943FD4441E189CB9006BF3BA /* Main.storyboard in Resources */,
@@ -796,6 +818,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchDog WatchKit Extension/WatchDog WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				INFOPLIST_FILE = "WatchDog WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp.watchkitextension;
@@ -812,6 +836,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchDog WatchKit Extension/WatchDog WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				INFOPLIST_FILE = "WatchDog WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp.watchkitextension;
@@ -830,6 +856,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				IBSC_MODULE = WatchDog_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDog WatchKit App/Info.plist";
@@ -852,6 +879,7 @@
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				IBSC_MODULE = WatchDog_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDog WatchKit App/Info.plist";
