@@ -98,7 +98,7 @@ class InterfaceController: WKInterfaceController,  WCSessionDelegate {
     
     
     
-    // Receiver
+    // Receiver file function
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         // handle receiving file
         DispatchQueue.main.async {
