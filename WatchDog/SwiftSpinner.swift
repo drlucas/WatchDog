@@ -144,7 +144,7 @@ public class SwiftSpinner: UIView {
             spinner.alpha = 0.0
             
             guard let containerView = containerView() else {
-                fatalError("\n`UIApplication.keyWindow` is `nil`. If you're trying to show a spinner from your view controller's `viewDidLoad` method, do that from `viewWillAppear` instead. Alternatively use `useContainerView` to set a view where the spinner should show")
+                fatalError("\n`UIApplication.keyWindow` is `nil`. If you're trying to show a spinner from your view controller's `viewDidLoad` method, do that //from `viewWillAppear` instead. Alternatively use `useContainerView` to set a view where the spinner should show")
             }
             
             containerView.addSubview(spinner)

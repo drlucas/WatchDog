@@ -7,6 +7,8 @@
 //
 
 
+/*
+
 import UIKit
 typealias FormViewControllerType = UITableViewController
 typealias TextField = UITextField
@@ -43,3 +45,6 @@ class FormViewController: FormViewControllerType {
     
     
 }
+
+ 
+ */

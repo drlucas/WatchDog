@@ -13,11 +13,12 @@ import WatchConnectivity
 
 @UIApplicationMain
 
+
+
 class AppDelegate: UIResponder, UIApplicationDelegate {//, WCSessionDelegate  {
     
            var window: UIWindow?
-    
-    
+   
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
            // print("starting up")
           
@@ -45,4 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {//, WCSessionDelegate  {
         }
     }
 
+}
+
+class Authentication {
+    var authtoken = "" as String! // my authentication token to use in fitbark
+    
 }

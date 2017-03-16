@@ -51,9 +51,13 @@ class InterfaceController: WKInterfaceController,  WCSessionDelegate {
     
     
     func gogetcloud () {
-        //let container = CKContainer.default()
-        let container = CKContainer.init(identifier: "containerIdentifier=iCloud.aussies.ca.WatchDog")
+       // let container = CKContainer.default()
+         let container = CKContainer.init(identifier: "iCloud.aussies.ca.WatchDog")
+      //  let container = CKContainer.init(identifier: "containerIdentifier=iCloud.aussies.ca.WatchDog")
+/* Error: Optional(<CKError 0x17d38520: "Server Rejected Request" (15/2000); server message = "Internal server error"; uuid = 656C1EA8-A74E-4A4D-BACD-AE9B3AD9CFAE; container ID = "iCloud.aussies.ca.WatchDog.watchkitapp.watchkitextension">)
+*/
         container.requestApplicationPermission(.userDiscoverability) { (status, error) in
+            
             guard error == nil else {
                 print ("Error: \(error)")
                 return }
@@ -102,7 +106,7 @@ class InterfaceController: WKInterfaceController,  WCSessionDelegate {
     func session(_ session: WCSession, didReceive file: WCSessionFile) {
         // handle receiving file
         DispatchQueue.main.async {
-            let imageData = NSData.init(contentsOf: file.fileURL!)
+            let imageData = NSData.init(contentsOf: file.fileURL)
             print ("Image: \(imageData)")
             let image = UIImage(data: imageData as! Data)
             print ("Update woof picture")
