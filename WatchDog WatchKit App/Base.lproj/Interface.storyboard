@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
-    <device id="watch38" orientation="portrait">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="12106.1" systemVersion="16D32" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <device id="watch42" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="watchOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11508"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12074.1"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="12027"/>
     </dependencies>
     <scenes>
         <!--Interface Controller-->
@@ -14,13 +14,29 @@
             <objects>
                 <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="WatchDog_WatchKit_App" customModuleProvider="target">
                     <items>
-                        <imageView height="100" alignment="left" id="Tfm-c7-Jyy"/>
-                        <label alignment="left" text="Dog Activity: " id="1Ny-7f-ee9"/>
-                        <label alignment="left" text="15000" id="ieA-Rf-kCg"/>
+                        <imageView height="84" alignment="left" id="7Po-Np-th6"/>
+                        <button width="1" alignment="left" title="Fetch Points" id="9bt-CF-Bmd">
+                            <connections>
+                                <action selector="fetchpoints" destination="AgC-eL-Hgc" id="CCx-la-4gM"/>
+                            </connections>
+                        </button>
+                        <label width="156" height="25" alignment="left" text="FitBark Points" textAlignment="center" id="Kaf-uQ-6jm"/>
                     </items>
+                    <connections>
+                        <outlet property="dogbarkpoints" destination="Kaf-uQ-6jm" id="Wxg-kT-Tae"/>
+                        <outlet property="dogimageview" destination="7Po-Np-th6" id="G1x-TZ-6Ks"/>
+                        <segue destination="hZc-jX-jZZ" kind="relationship" relationship="nextPage" id="QWn-pm-Uw8"/>
+                    </connections>
                 </controller>
             </objects>
-            <point key="canvasLocation" x="92" y="69"/>
+            <point key="canvasLocation" x="-153.43589743589746" y="51"/>
+        </scene>
+        <!--Interface Controller-->
+        <scene sceneID="f0P-3C-6Ff">
+            <objects>
+                <controller id="hZc-jX-jZZ"/>
+            </objects>
+            <point key="canvasLocation" x="157" y="51"/>
         </scene>
         <!--Static Notification Interface Controller-->
         <scene sceneID="AEw-b0-oYE">

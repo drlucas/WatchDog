@@ -8,18 +8,20 @@
 
 import UIKit
 import OAuthSwift
+import WatchConnectivity
+
 
 @UIApplicationMain
 
-class AppDelegate: UIResponder, UIApplicationDelegate {
-    
-        var window: UIWindow?
 
 
+class AppDelegate: UIResponder, UIApplicationDelegate {//, WCSessionDelegate  {
     
+           var window: UIWindow?
+   
         func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey : Any]? = nil) -> Bool {
            // print("starting up")
-
+          
             return true
         }
         
@@ -44,4 +46,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+}
+
+class Authentication {
+    var authtoken = "" as String! // my authentication token to use in fitbark
+    
 }

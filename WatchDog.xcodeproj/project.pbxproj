@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */; };
+		9422C2D71E4BFDAF0057F3B2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A21E189CC8006BF3BA /* OAuthSwift.framework */; };
+		942B4CC61E64553600B0A12C /* Apple Settings Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 942B4CC51E64553600B0A12C /* Apple Settings Logo.png */; };
+		942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B4CD81E645A0C00B0A12C /* LoginViewController.swift */; };
 		943FD43F1E189CB9006BF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD43E1E189CB9006BF3BA /* AppDelegate.swift */; };
 		943FD4411E189CB9006BF3BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD4401E189CB9006BF3BA /* ViewController.swift */; };
 		943FD4441E189CB9006BF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943FD4421E189CB9006BF3BA /* Main.storyboard */; };
@@ -27,16 +31,45 @@
 		943FD4B31E189E72006BF3BA /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A41E189CC8006BF3BA /* OAuthSwift.framework */; };
 		943FD4B41E189E72006BF3BA /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A61E189CC8006BF3BA /* OAuthSwift.framework */; };
 		943FD4B51E189E72006BF3BA /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A81E189CC8006BF3BA /* OAuthSwift.framework */; };
+		94465AD31E5F19FF000F5CE5 /* FindFido.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94465AD21E5F19FF000F5CE5 /* FindFido.swift */; };
 		945542EB1E1ED1A10063CC10 /* WebViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EA1E1ED1A10063CC10 /* WebViewController.swift */; };
 		945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EC1E1ED2320063CC10 /* FormViewController.swift */; };
-		945542EF1E1ED5D40063CC10 /* Storyboards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945542EE1E1ED5D40063CC10 /* Storyboards.swift */; };
+		945606871E61AB340087E218 /* OAuth2.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 9483E2901E54928B00A16D18 /* OAuth2.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		945606941E6235050087E218 /* DogFoodDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 945606931E6235050087E218 /* DogFoodDetails.swift */; };
+		945606961E6351320087E218 /* dog-foodprint-frame.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 945606951E6351320087E218 /* dog-foodprint-frame.jpg */; };
+		945606971E636D420087E218 /* Alamofire.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 94B4A6F31E548C1900ED9E3E /* Alamofire.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		945606981E636D420087E218 /* OAuthSwift.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A21E189CC8006BF3BA /* OAuthSwift.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		9456069B1E636E070087E218 /* frame-background.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 9456069A1E636E070087E218 /* frame-background.jpg */; };
 		9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */; };
-		9463F37F1E40C4A3007CA0F6 /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */; };
 		9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */; };
-		94ADF9271E3C1750004DA391 /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94ADF9261E3C1750004DA391 /* CloudKit.framework */; };
+		9483E2951E5492A000A16D18 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9483E2901E54928B00A16D18 /* OAuth2.framework */; };
+		949C000A1E68DA9200B5AF1C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CFFFA1E68DA6700B5AF1C /* Charts.framework */; };
+		949C000B1E68DA9800B5AF1C /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 949CFFFA1E68DA6700B5AF1C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		94A99B731E64654200059899 /* DogFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A99B721E64654200059899 /* DogFoodTableViewController.swift */; };
+		94A99B751E66F9B100059899 /* DogDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A99B741E66F9B100059899 /* DogDetailsViewController.swift */; };
+		94B4A7001E548C5200ED9E3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B4A6F31E548C1900ED9E3E /* Alamofire.framework */; };
+		94B4A7011E548C5200ED9E3E /* Alamofire.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94B4A6FF1E548C1900ED9E3E /* Alamofire.framework */; };
+		94B58ACB1E493FB90004324F /* dog.png in Resources */ = {isa = PBXBuildFile; fileRef = 94B58ACA1E493FB90004324F /* dog.png */; };
+		94C467AB1E454B050027B63F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C467AA1E454B050027B63F /* CloudKit.framework */; };
+		94C467B01E47E7110027B63F /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 94C467AF1E47E7110027B63F /* CloudKit.framework */; };
+		94D1620B1E6849AB00FB9578 /* EPCalendarPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D162031E6849AB00FB9578 /* EPCalendarPicker.swift */; };
+		94D1620C1E6849AB00FB9578 /* EPCalendarConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D162041E6849AB00FB9578 /* EPCalendarConstants.swift */; };
+		94D1620D1E6849AB00FB9578 /* EPCalendarCell1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D162051E6849AB00FB9578 /* EPCalendarCell1.swift */; };
+		94D1620E1E6849AB00FB9578 /* EPCalendarCell1.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D162061E6849AB00FB9578 /* EPCalendarCell1.xib */; };
+		94D1620F1E6849AB00FB9578 /* EPCalendarHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D162071E6849AB00FB9578 /* EPCalendarHeaderView.swift */; };
+		94D162101E6849AB00FB9578 /* EPCalendarHeaderView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 94D162081E6849AB00FB9578 /* EPCalendarHeaderView.xib */; };
+		94D162111E6849AB00FB9578 /* EPExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94D162091E6849AB00FB9578 /* EPExtensions.swift */; };
+		94F5ED381E7AAF2300210D73 /* todo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94F5ED371E7AAF2300210D73 /* todo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		9422C2D91E4BFDAF0057F3B2 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 943FD4971E189CC8006BF3BA /* OAuthSwift.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = F43502791A6791B200038A29;
+			remoteInfo = OAuthSwift;
+		};
 		943FD4501E189CB9006BF3BA /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 943FD4331E189CB9006BF3BA /* Project object */;
@@ -114,9 +147,142 @@
 			remoteGlobalIDString = C4D50DF71BFB693F0053B624;
 			remoteInfo = OAuthSwiftTests;
 		};
+		945606911E622D480087E218 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+			proxyType = 1;
+			remoteGlobalIDString = EEDB8623193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
+		9483E28D1E54928B00A16D18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209471942772800736F1A;
+			remoteInfo = OAuth2macOS;
+		};
+		9483E28F1E54928B00A16D18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEDB8624193FAAE500C4EEA1;
+			remoteInfo = OAuth2iOS;
+		};
+		9483E2911E54928B00A16D18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 659854461C5B3BEA00237D39;
+			remoteInfo = OAuth2tvOS;
+		};
+		9483E2931E54928B00A16D18 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = EEE209A219427DFE00736F1A;
+			remoteInfo = OAuth2Tests;
+		};
+		949CFFF91E68DA6700B5AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F241D8110E600722320;
+			remoteInfo = Charts;
+		};
+		949CFFFB1E68DA6700B5AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06B120D51D811E6200D14B02;
+			remoteInfo = ChartsRealm;
+		};
+		949CFFFD1E68DA6700B5AF1C /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 06165F2E1D8110E600722320;
+			remoteInfo = ChartsTests;
+		};
+		94B4A6F21E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3319A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS";
+		};
+		94B4A6F41E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F8111E3E19A95C8B0040E7D1;
+			remoteInfo = "Alamofire iOS Tests";
+		};
+		94B4A6F61E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4DD67C0B1A5C55C900ED2280;
+			remoteInfo = "Alamofire macOS";
+		};
+		94B4A6F81E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F829C6B21A7A94F100A2CD59;
+			remoteInfo = "Alamofire macOS Tests";
+		};
+		94B4A6FA1E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626EF1BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS";
+		};
+		94B4A6FC1E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = 4CF626F81BA7CB3E0011A099;
+			remoteInfo = "Alamofire tvOS Tests";
+		};
+		94B4A6FE1E548C1900ED9E3E /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = E4202FE01B667AA100C997FB;
+			remoteInfo = "Alamofire watchOS";
+		};
+		94D161F31E68493700FB9578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94D161E61E68493700FB9578 /* EPCalendar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4C1C9B91BE7A305001AA643;
+			remoteInfo = EPCalendar;
+		};
+		94D161F51E68493700FB9578 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 94D161E61E68493700FB9578 /* EPCalendar.xcodeproj */;
+			proxyType = 2;
+			remoteGlobalIDString = F4C1C9CD1BE7A306001AA643;
+			remoteInfo = EPCalendarTests;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		9422C2DB1E4BFDAF0057F3B2 /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 12;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				949C000B1E68DA9800B5AF1C /* Charts.framework in Embed Frameworks */,
+				945606971E636D420087E218 /* Alamofire.framework in Embed Frameworks */,
+				945606981E636D420087E218 /* OAuthSwift.framework in Embed Frameworks */,
+				945606871E61AB340087E218 /* OAuth2.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		943FD4891E189CB9006BF3BA /* Embed App Extensions */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -142,6 +308,9 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		942B4CC51E64553600B0A12C /* Apple Settings Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple Settings Logo.png"; sourceTree = "<group>"; };
+		942B4CD81E645A0C00B0A12C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9433DD8B1E36357700FAD38E /* WatchDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchDog.entitlements; sourceTree = "<group>"; };
 		943FD43B1E189CB9006BF3BA /* WatchDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943FD43E1E189CB9006BF3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -169,13 +338,34 @@
 		943FD4811E189CB9006BF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943FD4831E189CB9006BF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		943FD4971E189CC8006BF3BA /* OAuthSwift.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuthSwift.xcodeproj; path = "../../OAuthSwift-master/OAuthSwift.xcodeproj"; sourceTree = "<group>"; };
+		94465AD21E5F19FF000F5CE5 /* FindFido.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FindFido.swift; path = ../FindFido.swift; sourceTree = "<group>"; };
 		945542EA1E1ED1A10063CC10 /* WebViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WebViewController.swift; sourceTree = "<group>"; };
 		945542EC1E1ED2320063CC10 /* FormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FormViewController.swift; sourceTree = "<group>"; };
-		945542EE1E1ED5D40063CC10 /* Storyboards.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboards.swift; sourceTree = "<group>"; };
+		945606931E6235050087E218 /* DogFoodDetails.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogFoodDetails.swift; sourceTree = "<group>"; };
+		945606951E6351320087E218 /* dog-foodprint-frame.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "dog-foodprint-frame.jpg"; sourceTree = "<group>"; };
+		9456069A1E636E070087E218 /* frame-background.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = "frame-background.jpg"; sourceTree = "<group>"; };
 		9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftSpinner.swift; sourceTree = "<group>"; };
-		9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogUserStructure.swift; sourceTree = "<group>"; };
-		94ADF9261E3C1750004DA391 /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		9463F38B1E42AAAC007CA0F6 /* WatchDog WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDog WatchKit App.entitlements"; sourceTree = "<group>"; };
+		9463F38C1E42AE9C007CA0F6 /* WatchDog WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchDog WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
+		9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2.xcodeproj; path = "../../OAuth2-P2-master/OAuth2/OAuth2.xcodeproj"; sourceTree = "<group>"; };
+		949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
+		94A99B721E64654200059899 /* DogFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogFoodTableViewController.swift; sourceTree = "<group>"; };
+		94A99B741E66F9B100059899 /* DogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogDetailsViewController.swift; sourceTree = "<group>"; };
+		94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Alamofire.xcodeproj; path = "../../Alamofire-master/Alamofire.xcodeproj"; sourceTree = "<group>"; };
+		94B58ACA1E493FB90004324F /* dog.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dog.png; sourceTree = "<group>"; };
+		94C467AA1E454B050027B63F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
+		94C467AE1E47E70D0027B63F /* WatchDog WatchKit Extension.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDog WatchKit Extension.entitlements"; sourceTree = "<group>"; };
+		94C467AF1E47E7110027B63F /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = Platforms/WatchOS.platform/Developer/SDKs/WatchOS3.1.sdk/System/Library/Frameworks/CloudKit.framework; sourceTree = DEVELOPER_DIR; };
+		94D161E61E68493700FB9578 /* EPCalendar.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = EPCalendar.xcodeproj; path = "../../CalendarPicker-master/EPCalendar.xcodeproj"; sourceTree = "<group>"; };
+		94D162031E6849AB00FB9578 /* EPCalendarPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPCalendarPicker.swift; path = EPCalendarPicker/EPCalendarPicker.swift; sourceTree = "<group>"; };
+		94D162041E6849AB00FB9578 /* EPCalendarConstants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPCalendarConstants.swift; path = EPCalendarPicker/EPCalendarConstants.swift; sourceTree = "<group>"; };
+		94D162051E6849AB00FB9578 /* EPCalendarCell1.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPCalendarCell1.swift; path = EPCalendarPicker/EPCalendarCell1.swift; sourceTree = "<group>"; };
+		94D162061E6849AB00FB9578 /* EPCalendarCell1.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EPCalendarCell1.xib; path = EPCalendarPicker/EPCalendarCell1.xib; sourceTree = "<group>"; };
+		94D162071E6849AB00FB9578 /* EPCalendarHeaderView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPCalendarHeaderView.swift; path = EPCalendarPicker/EPCalendarHeaderView.swift; sourceTree = "<group>"; };
+		94D162081E6849AB00FB9578 /* EPCalendarHeaderView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = EPCalendarHeaderView.xib; path = EPCalendarPicker/EPCalendarHeaderView.xib; sourceTree = "<group>"; };
+		94D162091E6849AB00FB9578 /* EPExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = EPExtensions.swift; path = EPCalendarPicker/EPExtensions.swift; sourceTree = "<group>"; };
+		94F5ED371E7AAF2300210D73 /* todo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = todo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -183,8 +373,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				94ADF9271E3C1750004DA391 /* CloudKit.framework in Frameworks */,
+				949C000A1E68DA9200B5AF1C /* Charts.framework in Frameworks */,
+				9483E2951E5492A000A16D18 /* OAuth2.framework in Frameworks */,
+				94B4A7001E548C5200ED9E3E /* Alamofire.framework in Frameworks */,
+				94B4A7011E548C5200ED9E3E /* Alamofire.framework in Frameworks */,
+				94C467AB1E454B050027B63F /* CloudKit.framework in Frameworks */,
 				943FD4B21E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
+				9422C2D71E4BFDAF0057F3B2 /* OAuthSwift.framework in Frameworks */,
 				943FD4B31E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
 				943FD4B41E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
 				943FD4B51E189E72006BF3BA /* OAuthSwift.framework in Frameworks */,
@@ -209,6 +404,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94C467B01E47E7110027B63F /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -218,6 +414,10 @@
 		943FD4321E189CB9006BF3BA = {
 			isa = PBXGroup;
 			children = (
+				949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */,
+				94D161E61E68493700FB9578 /* EPCalendar.xcodeproj */,
+				9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */,
+				94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */,
 				943FD4971E189CC8006BF3BA /* OAuthSwift.xcodeproj */,
 				943FD43D1E189CB9006BF3BA /* WatchDog */,
 				943FD4521E189CB9006BF3BA /* WatchDogTests */,
@@ -244,16 +444,23 @@
 		943FD43D1E189CB9006BF3BA /* WatchDog */ = {
 			isa = PBXGroup;
 			children = (
+				94D1620A1E6849AB00FB9578 /* Calendar Files */,
+				94F5ED371E7AAF2300210D73 /* todo.swift */,
 				9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */,
 				9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */,
-				9463F37E1E40C4A3007CA0F6 /* SwiftyJSON.swift */,
+				94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */,
 				943FD43E1E189CB9006BF3BA /* AppDelegate.swift */,
-				945542EE1E1ED5D40063CC10 /* Storyboards.swift */,
 				945542EA1E1ED1A10063CC10 /* WebViewController.swift */,
 				945542EC1E1ED2320063CC10 /* FormViewController.swift */,
 				943FD4401E189CB9006BF3BA /* ViewController.swift */,
+				94465AD21E5F19FF000F5CE5 /* FindFido.swift */,
+				945606931E6235050087E218 /* DogFoodDetails.swift */,
+				94A99B721E64654200059899 /* DogFoodTableViewController.swift */,
 				943FD4421E189CB9006BF3BA /* Main.storyboard */,
+				94A99B741E66F9B100059899 /* DogDetailsViewController.swift */,
+				942B4CD81E645A0C00B0A12C /* LoginViewController.swift */,
 				943FD4451E189CB9006BF3BA /* Assets.xcassets */,
+				945606991E636DE10087E218 /* Images */,
 				943FD4471E189CB9006BF3BA /* LaunchScreen.storyboard */,
 				9433DD8B1E36357700FAD38E /* WatchDog.entitlements */,
 				943FD44A1E189CB9006BF3BA /* Info.plist */,
@@ -282,9 +489,11 @@
 		943FD4671E189CB9006BF3BA /* WatchDog WatchKit App */ = {
 			isa = PBXGroup;
 			children = (
+				9463F38B1E42AAAC007CA0F6 /* WatchDog WatchKit App.entitlements */,
 				943FD4681E189CB9006BF3BA /* Interface.storyboard */,
 				943FD46B1E189CB9006BF3BA /* Assets.xcassets */,
 				943FD46D1E189CB9006BF3BA /* Info.plist */,
+				9463F38C1E42AE9C007CA0F6 /* WatchDog WatchKit App-Bridging-Header.h */,
 			);
 			path = "WatchDog WatchKit App";
 			sourceTree = "<group>";
@@ -292,6 +501,7 @@
 		943FD4761E189CB9006BF3BA /* WatchDog WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
+				94C467AE1E47E70D0027B63F /* WatchDog WatchKit Extension.entitlements */,
 				943FD4791E189CB9006BF3BA /* InterfaceController.swift */,
 				943FD47B1E189CB9006BF3BA /* ExtensionDelegate.swift */,
 				943FD47D1E189CB9006BF3BA /* NotificationController.swift */,
@@ -325,12 +535,83 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
+		945606991E636DE10087E218 /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				942B4CC51E64553600B0A12C /* Apple Settings Logo.png */,
+				9456069A1E636E070087E218 /* frame-background.jpg */,
+				945606951E6351320087E218 /* dog-foodprint-frame.jpg */,
+				94B58ACA1E493FB90004324F /* dog.png */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		9483E2871E54928A00A16D18 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				9483E28E1E54928B00A16D18 /* OAuth2.framework */,
+				9483E2901E54928B00A16D18 /* OAuth2.framework */,
+				9483E2921E54928B00A16D18 /* OAuth2.framework */,
+				9483E2941E54928B00A16D18 /* OAuth2Tests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		949CFFEC1E68DA6700B5AF1C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				949CFFFA1E68DA6700B5AF1C /* Charts.framework */,
+				949CFFFC1E68DA6700B5AF1C /* ChartsRealm.framework */,
+				949CFFFE1E68DA6700B5AF1C /* ChartsTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
 		94ADF9251E3C1750004DA391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				94ADF9261E3C1750004DA391 /* CloudKit.framework */,
+				94C467AF1E47E7110027B63F /* CloudKit.framework */,
+				94C467AA1E454B050027B63F /* CloudKit.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		94B4A6E81E548C1900ED9E3E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94B4A6F31E548C1900ED9E3E /* Alamofire.framework */,
+				94B4A6F51E548C1900ED9E3E /* Alamofire iOS Tests.xctest */,
+				94B4A6F71E548C1900ED9E3E /* Alamofire.framework */,
+				94B4A6F91E548C1900ED9E3E /* Alamofire macOS Tests.xctest */,
+				94B4A6FB1E548C1900ED9E3E /* Alamofire.framework */,
+				94B4A6FD1E548C1900ED9E3E /* Alamofire tvOS Tests.xctest */,
+				94B4A6FF1E548C1900ED9E3E /* Alamofire.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94D161E71E68493700FB9578 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				94D161F41E68493700FB9578 /* EPCalendar.app */,
+				94D161F61E68493700FB9578 /* EPCalendarTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		94D1620A1E6849AB00FB9578 /* Calendar Files */ = {
+			isa = PBXGroup;
+			children = (
+				94D162031E6849AB00FB9578 /* EPCalendarPicker.swift */,
+				94D162041E6849AB00FB9578 /* EPCalendarConstants.swift */,
+				94D162051E6849AB00FB9578 /* EPCalendarCell1.swift */,
+				94D162061E6849AB00FB9578 /* EPCalendarCell1.xib */,
+				94D162071E6849AB00FB9578 /* EPCalendarHeaderView.swift */,
+				94D162081E6849AB00FB9578 /* EPCalendarHeaderView.xib */,
+				94D162091E6849AB00FB9578 /* EPExtensions.swift */,
+			);
+			name = "Calendar Files";
+			path = "../../../CalendarPicker-master/EPCalendar";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -344,11 +625,14 @@
 				943FD4381E189CB9006BF3BA /* Frameworks */,
 				943FD4391E189CB9006BF3BA /* Resources */,
 				943FD48D1E189CB9006BF3BA /* Embed Watch Content */,
+				9422C2DB1E4BFDAF0057F3B2 /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				945606921E622D480087E218 /* PBXTargetDependency */,
 				943FD4661E189CB9006BF3BA /* PBXTargetDependency */,
+				9422C2DA1E4BFDAF0057F3B2 /* PBXTargetDependency */,
 			);
 			name = WatchDog;
 			productName = WatchDog;
@@ -440,6 +724,9 @@
 						DevelopmentTeam = Q2M9CTRHEY;
 						ProvisioningStyle = Automatic;
 						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
 							com.apple.Push = {
 								enabled = 1;
 							};
@@ -460,11 +747,27 @@
 					};
 					943FD4621E189CB9006BF3BA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q2M9CTRHEY;
+						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.ApplicationGroups.iOS = {
+								enabled = 0;
+							};
+						};
 					};
 					943FD4711E189CB9006BF3BA = {
 						CreatedOnToolsVersion = 8.2.1;
+						DevelopmentTeam = Q2M9CTRHEY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+							com.apple.iCloud = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -480,6 +783,22 @@
 			productRefGroup = 943FD43C1E189CB9006BF3BA /* Products */;
 			projectDirPath = "";
 			projectReferences = (
+				{
+					ProductGroup = 94B4A6E81E548C1900ED9E3E /* Products */;
+					ProjectRef = 94B4A6E71E548C1900ED9E3E /* Alamofire.xcodeproj */;
+				},
+				{
+					ProductGroup = 949CFFEC1E68DA6700B5AF1C /* Products */;
+					ProjectRef = 949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */;
+				},
+				{
+					ProductGroup = 94D161E71E68493700FB9578 /* Products */;
+					ProjectRef = 94D161E61E68493700FB9578 /* EPCalendar.xcodeproj */;
+				},
+				{
+					ProductGroup = 9483E2871E54928A00A16D18 /* Products */;
+					ProjectRef = 9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */;
+				},
 				{
 					ProductGroup = 943FD4981E189CC8006BF3BA /* Products */;
 					ProjectRef = 943FD4971E189CC8006BF3BA /* OAuthSwift.xcodeproj */;
@@ -546,6 +865,118 @@
 			remoteRef = 943FD4AD1E189CC8006BF3BA /* PBXContainerItemProxy */;
 			sourceTree = BUILT_PRODUCTS_DIR;
 		};
+		9483E28E1E54928B00A16D18 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 9483E28D1E54928B00A16D18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9483E2901E54928B00A16D18 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 9483E28F1E54928B00A16D18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9483E2921E54928B00A16D18 /* OAuth2.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = OAuth2.framework;
+			remoteRef = 9483E2911E54928B00A16D18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		9483E2941E54928B00A16D18 /* OAuth2Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = OAuth2Tests.xctest;
+			remoteRef = 9483E2931E54928B00A16D18 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		949CFFFA1E68DA6700B5AF1C /* Charts.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Charts.framework;
+			remoteRef = 949CFFF91E68DA6700B5AF1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		949CFFFC1E68DA6700B5AF1C /* ChartsRealm.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = ChartsRealm.framework;
+			remoteRef = 949CFFFB1E68DA6700B5AF1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		949CFFFE1E68DA6700B5AF1C /* ChartsTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = ChartsTests.xctest;
+			remoteRef = 949CFFFD1E68DA6700B5AF1C /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6F31E548C1900ED9E3E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 94B4A6F21E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6F51E548C1900ED9E3E /* Alamofire iOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire iOS Tests.xctest";
+			remoteRef = 94B4A6F41E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6F71E548C1900ED9E3E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 94B4A6F61E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6F91E548C1900ED9E3E /* Alamofire macOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire macOS Tests.xctest";
+			remoteRef = 94B4A6F81E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6FB1E548C1900ED9E3E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 94B4A6FA1E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6FD1E548C1900ED9E3E /* Alamofire tvOS Tests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = "Alamofire tvOS Tests.xctest";
+			remoteRef = 94B4A6FC1E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94B4A6FF1E548C1900ED9E3E /* Alamofire.framework */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.framework;
+			path = Alamofire.framework;
+			remoteRef = 94B4A6FE1E548C1900ED9E3E /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94D161F41E68493700FB9578 /* EPCalendar.app */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.application;
+			path = EPCalendar.app;
+			remoteRef = 94D161F31E68493700FB9578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		94D161F61E68493700FB9578 /* EPCalendarTests.xctest */ = {
+			isa = PBXReferenceProxy;
+			fileType = wrapper.cfbundle;
+			path = EPCalendarTests.xctest;
+			remoteRef = 94D161F51E68493700FB9578 /* PBXContainerItemProxy */;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
 /* End PBXReferenceProxy section */
 
 /* Begin PBXResourcesBuildPhase section */
@@ -553,8 +984,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				942B4CC61E64553600B0A12C /* Apple Settings Logo.png in Resources */,
+				94B58ACB1E493FB90004324F /* dog.png in Resources */,
 				943FD4491E189CB9006BF3BA /* LaunchScreen.storyboard in Resources */,
 				943FD4461E189CB9006BF3BA /* Assets.xcassets in Resources */,
+				94D162101E6849AB00FB9578 /* EPCalendarHeaderView.xib in Resources */,
+				94D1620E1E6849AB00FB9578 /* EPCalendarCell1.xib in Resources */,
+				9456069B1E636E070087E218 /* frame-background.jpg in Resources */,
+				945606961E6351320087E218 /* dog-foodprint-frame.jpg in Resources */,
 				943FD4441E189CB9006BF3BA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -597,14 +1034,24 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				94D1620C1E6849AB00FB9578 /* EPCalendarConstants.swift in Sources */,
+				94A99B751E66F9B100059899 /* DogDetailsViewController.swift in Sources */,
+				94A99B731E64654200059899 /* DogFoodTableViewController.swift in Sources */,
+				945606941E6235050087E218 /* DogFoodDetails.swift in Sources */,
 				943FD4411E189CB9006BF3BA /* ViewController.swift in Sources */,
-				945542EF1E1ED5D40063CC10 /* Storyboards.swift in Sources */,
 				945542EB1E1ED1A10063CC10 /* WebViewController.swift in Sources */,
 				9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */,
 				945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */,
+				94D1620F1E6849AB00FB9578 /* EPCalendarHeaderView.swift in Sources */,
+				94465AD31E5F19FF000F5CE5 /* FindFido.swift in Sources */,
 				943FD43F1E189CB9006BF3BA /* AppDelegate.swift in Sources */,
-				9463F37F1E40C4A3007CA0F6 /* SwiftyJSON.swift in Sources */,
+				94D1620B1E6849AB00FB9578 /* EPCalendarPicker.swift in Sources */,
+				94D162111E6849AB00FB9578 /* EPExtensions.swift in Sources */,
+				942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */,
+				94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */,
+				94F5ED381E7AAF2300210D73 /* todo.swift in Sources */,
 				9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */,
+				94D1620D1E6849AB00FB9578 /* EPCalendarCell1.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -638,6 +1085,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		9422C2DA1E4BFDAF0057F3B2 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuthSwift;
+			targetProxy = 9422C2D91E4BFDAF0057F3B2 /* PBXContainerItemProxy */;
+		};
 		943FD4511E189CB9006BF3BA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 943FD43A1E189CB9006BF3BA /* WatchDog */;
@@ -657,6 +1109,11 @@
 			isa = PBXTargetDependency;
 			target = 943FD4711E189CB9006BF3BA /* WatchDog WatchKit Extension */;
 			targetProxy = 943FD4741E189CB9006BF3BA /* PBXContainerItemProxy */;
+		};
+		945606921E622D480087E218 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = OAuth2iOS;
+			targetProxy = 945606911E622D480087E218 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -785,6 +1242,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchDog WatchKit Extension/WatchDog WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				INFOPLIST_FILE = "WatchDog WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp.watchkitextension;
@@ -793,7 +1252,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Debug;
 		};
@@ -801,6 +1260,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
+				CODE_SIGN_ENTITLEMENTS = "WatchDog WatchKit Extension/WatchDog WatchKit Extension.entitlements";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				INFOPLIST_FILE = "WatchDog WatchKit Extension/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @executable_path/../../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp.watchkitextension;
@@ -809,7 +1270,7 @@
 				SKIP_INSTALL = YES;
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
-				WATCHOS_DEPLOYMENT_TARGET = 3.1;
+				WATCHOS_DEPLOYMENT_TARGET = 3.2;
 			};
 			name = Release;
 		};
@@ -818,12 +1279,18 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				IBSC_MODULE = WatchDog_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDog WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchDog WatchKit App/WatchDog WatchKit App-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
@@ -835,12 +1302,17 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "iPhone Developer";
+				DEVELOPMENT_TEAM = Q2M9CTRHEY;
 				IBSC_MODULE = WatchDog_WatchKit_Extension;
 				INFOPLIST_FILE = "WatchDog WatchKit App/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = aussies.ca.WatchDog.watchkitapp;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = watchos;
 				SKIP_INSTALL = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "WatchDog WatchKit App/WatchDog WatchKit App-Bridging-Header.h";
 				SWIFT_VERSION = 3.0;
 				TARGETED_DEVICE_FAMILY = 4;
 				WATCHOS_DEPLOYMENT_TARGET = 3.1;
@@ -850,6 +1322,7 @@
 		943FD48F1E189CB9006BF3BA /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WatchDog/WatchDog.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
@@ -865,6 +1338,7 @@
 		943FD4901E189CB9006BF3BA /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WatchDog/WatchDog.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
