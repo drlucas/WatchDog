@@ -7,14 +7,16 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		940D82231E83F83C0090D51D /* MonthlyActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */; };
 		94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */; };
 		9422C2D71E4BFDAF0057F3B2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A21E189CC8006BF3BA /* OAuthSwift.framework */; };
 		942B4CC61E64553600B0A12C /* Apple Settings Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 942B4CC51E64553600B0A12C /* Apple Settings Logo.png */; };
 		942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B4CD81E645A0C00B0A12C /* LoginViewController.swift */; };
+		94380FE91E7ABAB80000DB12 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 94380FE81E7ABAB80000DB12 /* Images.xcassets */; };
+		943810011E7ABC4E0000DB12 /* Battery.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943810001E7ABC4E0000DB12 /* Battery.swift */; };
 		943FD43F1E189CB9006BF3BA /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD43E1E189CB9006BF3BA /* AppDelegate.swift */; };
 		943FD4411E189CB9006BF3BA /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD4401E189CB9006BF3BA /* ViewController.swift */; };
 		943FD4441E189CB9006BF3BA /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943FD4421E189CB9006BF3BA /* Main.storyboard */; };
-		943FD4461E189CB9006BF3BA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 943FD4451E189CB9006BF3BA /* Assets.xcassets */; };
 		943FD4491E189CB9006BF3BA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 943FD4471E189CB9006BF3BA /* LaunchScreen.storyboard */; };
 		943FD4541E189CB9006BF3BA /* WatchDogTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD4531E189CB9006BF3BA /* WatchDogTests.swift */; };
 		943FD45F1E189CB9006BF3BA /* WatchDogUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 943FD45E1E189CB9006BF3BA /* WatchDogUITests.swift */; };
@@ -308,15 +310,17 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyActivityViewController.swift; sourceTree = "<group>"; };
 		94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
 		942B4CC51E64553600B0A12C /* Apple Settings Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple Settings Logo.png"; sourceTree = "<group>"; };
 		942B4CD81E645A0C00B0A12C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9433DD8B1E36357700FAD38E /* WatchDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchDog.entitlements; sourceTree = "<group>"; };
+		94380FE81E7ABAB80000DB12 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		943810001E7ABC4E0000DB12 /* Battery.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Battery.swift; sourceTree = "<group>"; };
 		943FD43B1E189CB9006BF3BA /* WatchDog.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = WatchDog.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		943FD43E1E189CB9006BF3BA /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		943FD4401E189CB9006BF3BA /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		943FD4431E189CB9006BF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		943FD4451E189CB9006BF3BA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		943FD4481E189CB9006BF3BA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		943FD44A1E189CB9006BF3BA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		943FD44F1E189CB9006BF3BA /* WatchDogTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = WatchDogTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -446,6 +450,7 @@
 			children = (
 				94D1620A1E6849AB00FB9578 /* Calendar Files */,
 				94F5ED371E7AAF2300210D73 /* todo.swift */,
+				943810001E7ABC4E0000DB12 /* Battery.swift */,
 				9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */,
 				9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */,
 				94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */,
@@ -457,9 +462,10 @@
 				945606931E6235050087E218 /* DogFoodDetails.swift */,
 				94A99B721E64654200059899 /* DogFoodTableViewController.swift */,
 				943FD4421E189CB9006BF3BA /* Main.storyboard */,
+				940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */,
 				94A99B741E66F9B100059899 /* DogDetailsViewController.swift */,
 				942B4CD81E645A0C00B0A12C /* LoginViewController.swift */,
-				943FD4451E189CB9006BF3BA /* Assets.xcassets */,
+				94380FE81E7ABAB80000DB12 /* Images.xcassets */,
 				945606991E636DE10087E218 /* Images */,
 				943FD4471E189CB9006BF3BA /* LaunchScreen.storyboard */,
 				9433DD8B1E36357700FAD38E /* WatchDog.entitlements */,
@@ -985,9 +991,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				942B4CC61E64553600B0A12C /* Apple Settings Logo.png in Resources */,
+				94380FE91E7ABAB80000DB12 /* Images.xcassets in Resources */,
 				94B58ACB1E493FB90004324F /* dog.png in Resources */,
 				943FD4491E189CB9006BF3BA /* LaunchScreen.storyboard in Resources */,
-				943FD4461E189CB9006BF3BA /* Assets.xcassets in Resources */,
 				94D162101E6849AB00FB9578 /* EPCalendarHeaderView.xib in Resources */,
 				94D1620E1E6849AB00FB9578 /* EPCalendarCell1.xib in Resources */,
 				9456069B1E636E070087E218 /* frame-background.jpg in Resources */,
@@ -1043,6 +1049,7 @@
 				9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */,
 				945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */,
 				94D1620F1E6849AB00FB9578 /* EPCalendarHeaderView.swift in Sources */,
+				943810011E7ABC4E0000DB12 /* Battery.swift in Sources */,
 				94465AD31E5F19FF000F5CE5 /* FindFido.swift in Sources */,
 				943FD43F1E189CB9006BF3BA /* AppDelegate.swift in Sources */,
 				94D1620B1E6849AB00FB9578 /* EPCalendarPicker.swift in Sources */,
@@ -1050,6 +1057,7 @@
 				942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */,
 				94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */,
 				94F5ED381E7AAF2300210D73 /* todo.swift in Sources */,
+				940D82231E83F83C0090D51D /* MonthlyActivityViewController.swift in Sources */,
 				9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */,
 				94D1620D1E6849AB00FB9578 /* EPCalendarCell1.swift in Sources */,
 			);
@@ -1323,7 +1331,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WatchDog/WatchDog.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q2M9CTRHEY;
@@ -1339,7 +1346,6 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
-				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = WatchDog/WatchDog.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = Q2M9CTRHEY;

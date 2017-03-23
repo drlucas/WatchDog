@@ -90,6 +90,14 @@ class DogDetailsViewController: UIViewController, EPCalendarPickerDelegate, Char
     
     @IBOutlet weak var ChartType: UISegmentedControl!  // 0 = bar, 1 = line
     
+   override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "monthlygraph" {
+            print ("Send dog slug to monthly activity")
+            let detailsfido = segue.destination as! MonthlyActivityViewController
+            detailsfido.dogslug = dogslug
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         print ("Into the details controller for the dog - bday = \(self.dogbirthday)")
@@ -661,6 +669,10 @@ class DogDetailsViewController: UIViewController, EPCalendarPickerDelegate, Char
     }
 
     
+    @IBAction func ActivitySummaryMonth(_ sender: Any) {
+        //this will show the activity for the dogslug for the current month (line graph with different points) and also show the daily average 
+        
+    }
     
     @IBAction func showcalendar(_ sender: UIButton) {
         print ("show calendar")
@@ -725,6 +737,9 @@ class DogDetailsViewController: UIViewController, EPCalendarPickerDelegate, Char
              print ( "User selected dates: \(startingdate.text) and \(endingdate.text)") 
             GetDailyActivity(dogslug, startdate: self.date1, enddate: self.date2)
             }
+        
+        
+        
         
     }
     

@@ -1,9 +1,30 @@
-// List of features for WatchDog application 
+/*         
+ 
+ List of features for WatchDog application
+ 
+ 
+-------TODO--------
+
 
 // Apple TV support
-// Friends
+// Friends - list, find, close by
 // Goals or Achievements  - goal streak, best day, best week, daily activity (her avg, similar dogs), daily rest (her avg, similar dogs), all time points
-// Battery life
 // Health index, sleep score, calories, km
 // fix github sync
 // graph of daily points
+// Sync to device
+// Dog parks (close by, rating)
+
+ 
+-------DONE-------
+ Battery life  -- done thanks to help with http://dev.iachieved.it/iachievedit/notifications-and-userinfo-with-swift-3-0/
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ */

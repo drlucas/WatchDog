@@ -16,10 +16,13 @@ import WatchConnectivity
 import UIKit
 
 
+
 //class ViewController: OAuthViewController , WCSessionDelegate {
 class WatchViewController: UIViewController , WCSessionDelegate {
 
+    
     public typealias Queue = DispatchQueue
+    
     
     
     struct DogAuth {
@@ -37,12 +40,32 @@ class WatchViewController: UIViewController , WCSessionDelegate {
     let DocumentDirectory = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true)[0]
     let FileManager: FileManager = Foundation.FileManager.default
     
+    
     @IBOutlet weak var dogcountlabel: UILabel!
     @IBOutlet weak var dogimageview: UIImageView!
     @IBOutlet weak var userimageview: UIImageView!
     @IBOutlet weak var watchmessage: UILabel!
     @IBOutlet weak var barkpoints: UILabel!
  
+    @IBOutlet weak var batteryimage: UIImageView!
+    @IBOutlet weak var batterypercent: UILabel!
+    @IBAction func refreshbattery(_ sender: Any) {
+        //var batterylevel = 25 //just a place holder until we can get results back from fitbark
+        //
+     //   DispatchQueue.main.async {
+        let funcBattery = Battery()
+        
+
+        var batterylevel = funcBattery.batterystatus(dogslug: self.dogsluglist[0]) as Int
+        
+      //  batterypercent.text = String(describing: batterylevel) + "%"
+     //   batteryimage.image = UIImage(named: "frame-" + String(describing: batterylevel) )
+     //   print("Level is: \(batterylevel)")
+      
+       // }
+    }
+    
+  
     @IBAction func unwindToMenu(segue: UIStoryboardSegue) {
     print ("I'm back")
        
@@ -239,27 +262,33 @@ class WatchViewController: UIViewController , WCSessionDelegate {
 
     }
 
+    let myNotification = Notification.Name(rawValue:"MyNotification")
 
-//extension ViewController {
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
-        // init now web view handler
-       //
-        //let _ = internalWebViewController.webView
-        //self.navigationItem.title = "Login"
-        //watchkit testing
-       // session?.delegate = self
-       // session?.activate()
-    
         self.startActivityIndicator()
         getusername()  // icloud login
+        let nc = NotificationCenter.default
+        nc.addObserver(forName:myNotification, object:nil, queue:nil, using:catchNotification)
         
         
-    
+        
     }
- 
+
+    func catchNotification(notification:Notification) -> Void {
+        print("Catch notification")
+        
+        guard let userInfo = notification.userInfo,
+            let batterylevel  = userInfo["batterylevel"] as? Int
+            else {
+                print("No userInfo found in notification")
+                return
+        }
+        print(batterylevel)
+        batterypercent.text = String(describing: batterylevel) + "%"
+        batteryimage.image = UIImage(named: "frame-" + String(describing: batterylevel) )
+    }
+  
     
     override func viewWillAppear(_ animated: Bool) {
         
@@ -844,6 +873,8 @@ class Semaphore<T> {
     func cancel() {
         segueSemaphore.signal()
     }
+    
+    
 }
 
 
