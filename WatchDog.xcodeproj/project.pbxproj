@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		940D82231E83F83C0090D51D /* MonthlyActivityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */; };
 		94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */; };
+		9419A8131EAE1C4D00D6A051 /* DogParkDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9419A8121EAE1C4D00D6A051 /* DogParkDetailsViewController.swift */; };
 		9422C2D71E4BFDAF0057F3B2 /* OAuthSwift.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 943FD4A21E189CC8006BF3BA /* OAuthSwift.framework */; };
 		942B4CC61E64553600B0A12C /* Apple Settings Logo.png in Resources */ = {isa = PBXBuildFile; fileRef = 942B4CC51E64553600B0A12C /* Apple Settings Logo.png */; };
 		942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 942B4CD81E645A0C00B0A12C /* LoginViewController.swift */; };
@@ -45,6 +46,7 @@
 		9463F3751E40B7EB007CA0F6 /* SwiftSpinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3741E40B7EB007CA0F6 /* SwiftSpinner.swift */; };
 		9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9463F3871E413D2B007CA0F6 /* DogUserStructure.swift */; };
 		9483E2951E5492A000A16D18 /* OAuth2.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9483E2901E54928B00A16D18 /* OAuth2.framework */; };
+		9491ADB91E8A8F280075C93D /* ParkViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9491ADB81E8A8F280075C93D /* ParkViewController.swift */; };
 		949C000A1E68DA9200B5AF1C /* Charts.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 949CFFFA1E68DA6700B5AF1C /* Charts.framework */; };
 		949C000B1E68DA9800B5AF1C /* Charts.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = 949CFFFA1E68DA6700B5AF1C /* Charts.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
 		94A99B731E64654200059899 /* DogFoodTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 94A99B721E64654200059899 /* DogFoodTableViewController.swift */; };
@@ -312,6 +314,7 @@
 /* Begin PBXFileReference section */
 		940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MonthlyActivityViewController.swift; sourceTree = "<group>"; };
 		94170BC71E780EAA004F3E7E /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		9419A8121EAE1C4D00D6A051 /* DogParkDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogParkDetailsViewController.swift; sourceTree = "<group>"; };
 		942B4CC51E64553600B0A12C /* Apple Settings Logo.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Apple Settings Logo.png"; sourceTree = "<group>"; };
 		942B4CD81E645A0C00B0A12C /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		9433DD8B1E36357700FAD38E /* WatchDog.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = WatchDog.entitlements; sourceTree = "<group>"; };
@@ -353,6 +356,7 @@
 		9463F38B1E42AAAC007CA0F6 /* WatchDog WatchKit App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "WatchDog WatchKit App.entitlements"; sourceTree = "<group>"; };
 		9463F38C1E42AE9C007CA0F6 /* WatchDog WatchKit App-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "WatchDog WatchKit App-Bridging-Header.h"; sourceTree = "<group>"; };
 		9483E2861E54928A00A16D18 /* OAuth2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = OAuth2.xcodeproj; path = "../../OAuth2-P2-master/OAuth2/OAuth2.xcodeproj"; sourceTree = "<group>"; };
+		9491ADB81E8A8F280075C93D /* ParkViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParkViewController.swift; sourceTree = "<group>"; };
 		949CFFEB1E68DA6700B5AF1C /* Charts.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = Charts.xcodeproj; path = "../../Charts-master/Charts.xcodeproj"; sourceTree = "<group>"; };
 		94A99B721E64654200059899 /* DogFoodTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogFoodTableViewController.swift; sourceTree = "<group>"; };
 		94A99B741E66F9B100059899 /* DogDetailsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DogDetailsViewController.swift; sourceTree = "<group>"; };
@@ -462,6 +466,8 @@
 				945606931E6235050087E218 /* DogFoodDetails.swift */,
 				94A99B721E64654200059899 /* DogFoodTableViewController.swift */,
 				943FD4421E189CB9006BF3BA /* Main.storyboard */,
+				9419A8121EAE1C4D00D6A051 /* DogParkDetailsViewController.swift */,
+				9491ADB81E8A8F280075C93D /* ParkViewController.swift */,
 				940D82221E83F83C0090D51D /* MonthlyActivityViewController.swift */,
 				94A99B741E66F9B100059899 /* DogDetailsViewController.swift */,
 				942B4CD81E645A0C00B0A12C /* LoginViewController.swift */,
@@ -1046,6 +1052,7 @@
 				945606941E6235050087E218 /* DogFoodDetails.swift in Sources */,
 				943FD4411E189CB9006BF3BA /* ViewController.swift in Sources */,
 				945542EB1E1ED1A10063CC10 /* WebViewController.swift in Sources */,
+				9419A8131EAE1C4D00D6A051 /* DogParkDetailsViewController.swift in Sources */,
 				9463F3881E413D2B007CA0F6 /* DogUserStructure.swift in Sources */,
 				945542ED1E1ED2320063CC10 /* FormViewController.swift in Sources */,
 				94D1620F1E6849AB00FB9578 /* EPCalendarHeaderView.swift in Sources */,
@@ -1055,6 +1062,7 @@
 				94D1620B1E6849AB00FB9578 /* EPCalendarPicker.swift in Sources */,
 				94D162111E6849AB00FB9578 /* EPExtensions.swift in Sources */,
 				942B4CD91E645A0C00B0A12C /* LoginViewController.swift in Sources */,
+				9491ADB91E8A8F280075C93D /* ParkViewController.swift in Sources */,
 				94170BC81E780EAA004F3E7E /* SwiftyJSON.swift in Sources */,
 				94F5ED381E7AAF2300210D73 /* todo.swift in Sources */,
 				940D82231E83F83C0090D51D /* MonthlyActivityViewController.swift in Sources */,

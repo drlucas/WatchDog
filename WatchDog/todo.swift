@@ -13,7 +13,7 @@
 // fix github sync
 // graph of daily points
 // Sync to device
-// Dog parks (close by, rating)
+// Dog parks (close by, rating, other dogs who have visited) integration with  https://worldofangus.com
 
  
 -------DONE-------

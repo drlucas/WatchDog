@@ -72,6 +72,12 @@ class WatchViewController: UIViewController , WCSessionDelegate {
         
     }
     
+    @IBAction func unwindFromPark(segue: UIStoryboardSegue) {
+        print ("I'm back from thepark")
+        
+        
+    }
+    
     @IBAction func unwindFromCharts(segue: UIStoryboardSegue) {
         print ("I'm back from charts")
     }
@@ -79,8 +85,8 @@ class WatchViewController: UIViewController , WCSessionDelegate {
     @IBAction func LoginButton(_ sender: UIButton) {
         print ("Login pushed")
         //if we already have self.authtoken then don't do anything
-       // if (self.authtoken != nil) {
-         if (authtoken != nil) {
+        if (self.authtoken != "" ) {
+     //    if (authtoken != nil) {
                 print ("We have a token: \(self.authtoken)")
         }
         else {
